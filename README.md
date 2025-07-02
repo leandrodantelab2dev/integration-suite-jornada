@@ -62,5 +62,24 @@ Message processData(Message message) {
 }
 ```
 
+##Payload
+```
+{
+  "userId": "104065",
+  "nomeCompleto": "João da Silva",
+  "email": "joao.silva@empresa.com",
+  "departamento": "Financeiro",
+  "tiket": {
+    "titulo": "Erro no sistema de ponto",
+    "descricao": "Não consigo registrar minhas horas no SuccessFactors.",
+    "tipoSolicitacao": "Problema Técnico",
+    "prioridade": "Alta",
+    "sistemaAfetado": "SuccessFactors",
+    "statusInicial": "Novo",
+    "dataHoraSolicitacao": "2025-07-02T10:35:00Z"
+  }
+}
+```
+
 ## Solace
 Link Solace: https://console.solace.cloud/login?reason=auth
