@@ -49,5 +49,18 @@ Message processData(Message message) {
 }
 ```
 
+## Service Key
+```
+{
+    "oauth": {
+        "clientid": "sb-bdca692b-0f58-4be9-8e51-c5202344c127!b455374|it-rt-c05249b3trial!b26655",
+        "clientsecret": "e104d341-0593-4398-bed9-0f82ca5fc730$1AxJFLVmLotCPUlLj_Kymfam01ztlbzihqbzBH8w70Q=",
+        "url": "https://c05249b3trial.it-cpitrial05-rt.cfapps.us10-001.hana.ondemand.com",
+        "createdate": "2025-07-02T00:17:31.919Z",
+        "tokenurl": "https://c05249b3trial.authentication.us10.hana.ondemand.com/oauth/token"
+    }
+}
+```
+
 ## Solace
 Link Solace: https://console.solace.cloud/login?reason=auth
