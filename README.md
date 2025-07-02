@@ -62,7 +62,7 @@ Message processData(Message message) {
 }
 ```
 
-##Payload
+## Payload
 ```
 {
   "userId": "104065",
