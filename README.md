@@ -81,5 +81,13 @@ Message processData(Message message) {
 }
 ```
 
+## Erro Body
+```
+{
+  "Status": "${property.p_status}",
+  "Message": "${property. p_message}
+}
+```
+
 ## Solace
 Link Solace: https://console.solace.cloud/login?reason=auth
