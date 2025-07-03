@@ -85,7 +85,7 @@ Message processData(Message message) {
 ```
 {
   "Status": "${property.p_status}",
-  "Message": "${property. p_message}
+  "Message": "${property. p_message}"
 }
 ```
 
