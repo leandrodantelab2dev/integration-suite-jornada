@@ -89,5 +89,43 @@ Message processData(Message message) {
 }
 ```
 
+
+
 ## Solace
 Link Solace: https://console.solace.cloud/login?reason=auth
+
+
+## Policy 01
+```
+<KeyValueMapOperations mapIdentifier="Credential_SAP_CI" async="true" continueOnError="false" enabled="true" xmlns="http://www.sap.com/apimgmt">
+
+  <Get assignTo="private.basicAuth.username">
+      <Key>
+          <Parameter>user</Parameter>
+      </Key>
+  </Get>
+  <Get assignTo="private.basicAuth.password">
+      <Key>
+          <Parameter>password</Parameter>
+      </Key>
+  </Get>
+  <!-- the scope of the key value map. Valid values are environment, organization, apiproxy and policy -->
+  <Scope>environment</Scope>
+</KeyValueMapOperations>
+```
+
+## Policy 02
+```
+<BasicAuthentication async='true' continueOnError='false' enabled='true' xmlns='http://www.sap.com/apimgmt'>
+  <!-- Operation can be Encode or Decode -->
+  <Operation>Encode</Operation>
+  <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <!-- for Encode, User element can be used to dynamically populate the user value -->
+  <User ref='private.basicAuth.username'></User>
+
+  <Password ref='private.basicAuth.password'></Password>
+  <!-- Source is used to retrieve the encoded value of username and password. This should not be used if the operation is Encode-->
+
+  <AssignTo createNew="false">request.header.Authorization</AssignTo>
+</BasicAuthentication>
+```
